@@ -10,5 +10,5 @@ def test_validate_first_name(instance_of_main_class):
 
 def test_invalidate_first_name(instance_of_main_class):
     with pytest.raises(InputError):
-        instance_of_main_class.validate_first_name("m9")
+        instance_of_main_class.validate_first_name(" m9 ")
 
