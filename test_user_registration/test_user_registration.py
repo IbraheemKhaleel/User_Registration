@@ -60,3 +60,13 @@ def test_invalidate_phone_number_should_raise_exception(instance_of_main_class):
 def test_validate_email_id(input, expected, instance_of_main_class):
     result = instance_of_main_class.validate_email_id(input)
     assert result == expected
+
+
+def test_validate_password(instance_of_main_class):
+    result = instance_of_main_class.validate_password("Alkh_906TY")
+    assert result.__eq__(True)
+
+
+def test_invalidate_password_should_raise_exception(instance_of_main_class):
+    with pytest.raises(InputError):
+        instance_of_main_class.validate_password("abceqw")
