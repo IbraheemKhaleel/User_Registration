@@ -7,15 +7,15 @@ class UserRegistration:
     """
     Created a class for validating user registration
     """
-    FIRST_NAME_PATTERN = r'^[A-Z][A-Za-z]{2,}$'
+    NAME_PATTERN = r'^[A-Z][A-Za-z]{2,}$'
 
-    def validate_first_name(self, first_name):
+    def validate_name(self, name):
         """
-        :param first_name:
-        :return: if first name matches with pattern, return True
+        :param name:
+        :return: if  name matches with pattern, return True
         """
-        pattern = re.compile(self.FIRST_NAME_PATTERN)
-        match = pattern.search(first_name)
+        pattern = re.compile(self.NAME_PATTERN)
+        match = pattern.search(name)
         if not match:
             raise InputError(" Enter the first name with minimum three characters ")
         else:
